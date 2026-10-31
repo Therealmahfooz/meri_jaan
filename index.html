@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>A Royal Tale of Love • RUTBA</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Marcellus&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Golden Dust Canvas -->
+  <canvas id="dustCanvas"></canvas>
+
+  <!-- Top Floating Music Pill -->
+  <div class="music-pill" id="audioToggle">
+    <div class="music-dot"></div>
+    <span class="music-text" id="audioStatus">Loading music</span>
+  </div>
+
+  <!-- Book Viewport -->
+  <div class="stage-container">
+    <div class="book-container" id="bookContainer">
+
+      <!-- ================= SPREAD 0: FRONT COVER ================= -->
+      <div class="book-spread active cover-spread" id="spread-0">
+        <div class="single-page modern-classic-cover">
+          <div class="luxury-border-outer"></div>
+          <div class="luxury-border-inner"></div>
+
+          <div class="corner-dot tl"></div>
+          <div class="corner-dot tr"></div>
+          <div class="corner-dot bl"></div>
+          <div class="corner-dot br"></div>
+
+          <div class="clean-love-card">
+            <div class="minimal-emblem">
+              <span>﷽</span>
+            </div>
+
+            <div class="sweet-tagline">A Quiet Confession</div>
+            <h1 class="main-love-title">A Tale of Love</h1>
+            <div class="sweet-script-sub">written for the keeper of my heart</div>
+
+            <div class="gold-ribbon-divider">❦</div>
+
+            <div class="clean-dedication">
+              <span class="dedication-small">Dedicated solely to</span>
+              <h2 class="rutba-highlight">RUTBA</h2>
+            </div>
+
+            <p class="tender-note">Every word etched inside belongs only to you.</p>
+
+            <button class="aesthetic-open-btn" onclick="nextSpread()">
+              <span>Open Diary</span>
+              <span class="btn-glyph">⟶</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SPREAD 1: CHAPTER I & CHAPTER II ================= -->
+      <div class="book-spread" id="spread-1">
+        <!-- LEFT: Chapter I -->
+        <div class="page-half left-page vellum-theme">
+          <div class="spine-shading right"></div>
+          
+          <div class="page-top-bar">
+            <span class="chapter-tag">Chapter I</span>
+            <span class="chapter-date">Oct 21 • 11:26 PM</span>
+          </div>
+
+          <h3 class="story-heading">The Silence of My Soul</h3>
+
+          <div class="story-content">
+            <span class="drop-letter">I</span>t was exactly 11:26 at night when my phone rang, and your voice carried three words across the line that changed everything: <em>"I love you."</em>
+            <br><br>
+            In that singular breath, my mind went completely blank. The world turned still, and words deserted me. It was not hesitation, but pure, stunned joy taking over my heart. 
+            <br><br>
+            I could not answer you right then on that phone call, but that quiet moment was my soul quietly accepting you forever.
+          </div>
+
+          <div class="page-bottom-bar">
+            <button class="nav-btn" onclick="prevSpread()">⟵ Cover</button>
+            <span class="page-index">• I •</span>
+            <button class="nav-btn mobile-only-btn" onclick="nextSpread()">Next ⟶</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Chapter II -->
+        <div class="page-half right-page vellum-theme">
+          <div class="spine-shading left"></div>
+
+          <div class="page-top-bar">
+            <span class="chapter-tag">Chapter II</span>
+            <span class="chapter-date">The Turning Point</span>
+          </div>
+
+          <h3 class="story-heading">The Long-Awaited Answer</h3>
+
+          <div class="story-content">
+            For three long years, I had walked through the echoes of a past heartbreak, convinced I could not love again. 
+            <br><br>
+            Then you spoke. You possessed such vibrant confidence—moving your hands as you spoke with that lively charm. Even when you kept calling me <strong>"Bhaiya"</strong> with that cute awkwardness, something in you captivated me.
+            <br><br>
+            Yet that very night, when you asked for our photograph and posted it on your story tagging me, my past vanished forever.
+          </div>
+
+          <div class="grand-confession-card">
+            <div class="confession-text">I LOVE YOU TOO, RUTBA</div>
+            <div class="confession-tagline">With all my heart, today and forever.</div>
+          </div>
+
+          <div class="page-bottom-bar">
+            <button class="nav-btn mobile-only-btn" onclick="prevSpread()">⟵ Cover</button>
+            <span class="page-index">• II •</span>
+            <button class="nav-btn" onclick="nextSpread()">Next ⟶</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SPREAD 2: CHAPTER III & CHAPTER IV ================= -->
+      <div class="book-spread" id="spread-2">
+        <!-- LEFT: Chapter III -->
+        <div class="page-half left-page vellum-theme">
+          <div class="spine-shading right"></div>
+
+          <div class="page-top-bar">
+            <span class="chapter-tag">Chapter III</span>
+            <span class="chapter-date">Pure Adoration</span>
+          </div>
+
+          <h3 class="story-heading">Your Innocent Grace</h3>
+
+          <div class="story-content">
+            I love how you share every little fragment of your day with me just like a little child.
+            <br><br>
+            Whenever you plead repeatedly, or make those cute stubborn requests to get your way—things I once thought were cheesy—suddenly became the sweetest moments in the world because they come from you.
+            <br><br>
+            And whenever overthinking clouds your mind, worrying over other people, I will always be right there to gently remind you: <em>"Don't worry about others, my love. Their life is theirs; this precious world belongs solely to us."</em>
+          </div>
+
+          <div class="page-bottom-bar">
+            <button class="nav-btn" onclick="prevSpread()">⟵ Prev</button>
+            <span class="page-index">• III •</span>
+            <button class="nav-btn mobile-only-btn" onclick="nextSpread()">Next ⟶</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Chapter IV -->
+        <div class="page-half right-page vellum-theme">
+          <div class="spine-shading left"></div>
+
+          <div class="page-top-bar">
+            <span class="chapter-tag">Chapter IV</span>
+            <span class="chapter-date">October 14 • Our Date</span>
+          </div>
+
+          <h3 class="story-heading">Where Time Stood Still</h3>
+
+          <div class="story-content">
+            I still cherish that evening on October 14. We shared chicken fried rice and talked endlessly. Looking at your glowing smile, my heart whispered: <em>I wish time would freeze right here, so I could just keep listening to you forever.</em>
+          </div>
+
+          <div class="favorites-compact">
+            <div class="fav-item"><span>✦</span> Steaming Momos & Chowmein</div>
+            <div class="fav-item"><span>✦</span> The Colour Black</div>
+            <div class="fav-item"><span>✦</span> Black Currant Ice Cream</div>
+          </div>
+
+          <div class="page-bottom-bar">
+            <button class="nav-btn mobile-only-btn" onclick="prevSpread()">⟵ Prev</button>
+            <span class="page-index">• IV •</span>
+            <button class="nav-btn" onclick="nextSpread()">Next ⟶</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SPREAD 3: CHAPTER V & CHAPTER VI ================= -->
+      <div class="book-spread" id="spread-3">
+        <!-- LEFT: Chapter V -->
+        <div class="page-half left-page vellum-theme">
+          <div class="spine-shading right"></div>
+
+          <div class="page-top-bar">
+            <span class="chapter-tag">Chapter V</span>
+            <span class="chapter-date">Sacred Vows</span>
+          </div>
+
+          <h3 class="story-heading">Promises From My Heart</h3>
+
+          <div class="story-content">
+            <div class="vows-compact">
+              <p><span>⚜</span> I will never break your trust or bring sorrow to your pure heart.</p>
+              <p><span>⚜</span> I will belong only to you, through every single chapter of life.</p>
+              <p><span>⚜</span> Whenever you overthink, my arms will always be your peaceful refuge.</p>
+              <p><span>⚜</span> Whenever you are sad, I will bring black currant ice cream until that radiant smile returns.</p>
+            </div>
+          </div>
+
+          <div class="page-bottom-bar">
+            <button class="nav-btn" onclick="prevSpread()">⟵ Prev</button>
+            <span class="page-index">• V •</span>
+            <button class="nav-btn mobile-only-btn" onclick="nextSpread()">The Question ⟶</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Chapter VI (Proposal) -->
+        <div class="page-half right-page vellum-theme">
+          <div class="spine-shading left"></div>
+
+          <div class="proposal-box">
+            <div class="ring-ornament">❦</div>
+            <h3 class="story-heading" style="font-size: 21px; margin-bottom: 4px;">Will You Be Mine Forever?</h3>
+            
+            <p class="proposal-quote">
+              "You brought warmth back into my life, Rutba. Walk this journey with me, and let me love you for all of eternity."
+            </p>
+
+            <div class="proposal-buttons" id="btnGroup">
+              <button class="btn-yes" id="yesBtn" onclick="acceptProposal()">Yes, Always & Forever</button>
+              <button class="btn-no" id="noBtn" onmouseenter="dodgeNo()" onclick="dodgeNo()">No</button>
+            </div>
+
+            <div id="acceptedMessage" class="accepted-tag" style="display: none;">
+              <span>You hold my heart forever, Rutba! 🌹✨</span>
+            </div>
+          </div>
+
+          <div class="page-bottom-bar">
+            <button class="nav-btn mobile-only-btn" onclick="prevSpread()">⟵ Prev</button>
+            <span class="page-index">• VI •</span>
+            <button class="nav-btn" onclick="nextSpread()">Finish ⟶</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SPREAD 4: BACK COVER ================= -->
+      <div class="book-spread" id="spread-4">
+        <div class="page-half left-page modern-classic-cover finis-page">
+          <div class="spine-shading right"></div>
+          <div class="luxury-border-outer"></div>
+          <div class="luxury-border-inner"></div>
+          <div class="clean-love-card">
+            <div class="minimal-emblem" style="width: 44px; height: 44px; font-size: 18px;"><span>خاتم</span></div>
+            <h3 class="main-love-title" style="font-size: 22px; letter-spacing: 4px;">FINISH</h3>
+            <div class="gold-ribbon-divider">❦</div>
+            <p class="tender-note" style="margin-bottom: 18px;">Where our forever quietly begins...</p>
+            <button class="aesthetic-open-btn" onclick="goToStart()">
+              <span>Read From Start</span><span class="btn-glyph">↺</span>
+            </button>
+          </div>
+        </div>
+        <div class="page-half right-page end-board">
+          <div class="spine-shading left"></div>
+          <div class="end-ornament">❦</div>
+          <div class="end-name">RUTBA</div>
+          <div class="end-sub">forever &amp; always</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
